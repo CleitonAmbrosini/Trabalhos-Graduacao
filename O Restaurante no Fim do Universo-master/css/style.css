@@ -1,0 +1,126 @@
+@font-face {
+      font-family: "tangerine";
+      src: url("/fonts/Tangerine_Bold.ttf") format("truetype");
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body,
+html {
+	height:100%;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+  
+/* ========= Configura os elementos "parallax" */
+.parallax{
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 0;
+	position: relative;
+    
+}
+
+/* Configura um background para cada elemento */
+.div1 {
+	background-image: url(../imagens/1.jpeg);
+}
+.div2 {
+    background-size: auto;
+	background-image: url(../imagens/coquetel.jpg);
+}
+.div3 {
+    background-size: auto;
+	background-image: url(../imagens/doce.jpg);
+}
+.div4 {
+    background-size: auto;
+	background-image: url(../imagens/veg.jpg);
+}
+.div5 {
+    background-size: auto;
+	background-image: url(../imagens/dicas.jpg);
+}
+.div6 {
+    background-size: auto;
+	background-image: url(../imagens/contato.jpg);
+}
+
+/* Configura os textos */
+.text{
+    color: #4d1616;
+    font-size: 25px;
+    letter-spacing: 10px;
+    height: 100px;
+    position: absolute;
+    top: 320px;
+}
+.text2{
+    color: #672323;
+    font-size: 120px;
+    text-shadow: 2px -2px white;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    font-family: 'tangerine';
+}
+@media only screen and (max-width: 500px) {
+ .text2{
+    color: #672323;
+    font-size: 65px;
+    text-shadow: 2px -2px white;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    font-family: 'tangerine';
+}
+}
+/* ========= Configura os elementos "parallax" */
+
+/* ============= configurações do menu */
+.menu{
+    transition: 2s ease-in;
+}
+
+.navbar-default{
+    height: 100px;
+    font-weight: bolder;
+    padding-right: 0%;
+    padding-top: 1%;
+}
+
+.menuanimado{
+    background-color:#f8f8f8;
+    height: 58px;
+    padding-top: 0%;
+    border: none;
+    padding-right: -200px;
+}
+
+@media only screen and (max-width: 766px) {
+    .navbar-default {background-color: #f8f8f8; height: 58px;}
+    .collapsing, .in {background-color: #f8f8f8;}
+    .collapsing ul li a, .in ul li a {color: #4d1616!important;}
+    .collapsing ul li a:hover, .in ul li a:hover {color: #f59321!important;}
+}
+/* ============= configurações do menu */
+
+/* ===== footer */
+#footer {
+    height: 100px;
+    background-color:#dce1da;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#efefef;
+}
+/* ===== footer */

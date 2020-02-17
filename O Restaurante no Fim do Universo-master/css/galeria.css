@@ -1,0 +1,207 @@
+@font-face {
+      font-family: "andika";
+      src: url("/fonts/andika.ttf") format("truetype");
+}
+
+/* painel */
+.panel-group{
+    font-family: "andika";
+    color: #4d1616;
+    font-size: 16px;
+}
+/* painel */
+
+/* cabeçalho*/
+.cabecalho { 
+    font: 25px Arial, Helvetica, sans-serif;  
+    color: #4d1616;
+    border-top: 14px solid #4d1616; /* Borda em cima */
+    border-left: 2px solid #4d1616; /* Borda a esquerda*/
+    left:1%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    width: 98%;
+} 
+/* demais configurações */
+
+.text-titulo{
+    font-size: 35px;
+    font-family: "andika";
+    font-style: oblique;
+}
+
+.menu-de-buscas{
+    margin-top: 6px;
+}
+/* #f8f8f8 */
+.botao{
+    height: 30px;
+    font-size: 14px;
+    color: #4d1616;
+    border: none;
+    background-color: #f8f8f8 ;
+    
+    margin-right: 30px;
+    font-family: "andika";
+}
+
+.botao:hover{
+    color: #f48d16;
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+.port-image{
+    width: 100%;
+}
+
+.gallery_product{
+    margin-bottom: 30px;  
+}
+
+.img-responsive{
+    box-shadow: 5px 5px 5px 2px black; 
+}
+
+.texto-tela-grande{
+    display: inline;
+    font-size: 18px;
+    color: #4d1616;
+    padding-left: 0%;
+    font-family: "andika";
+}
+
+.texto-tela-grande .descricao{
+    font-size: 15px;
+    color: #535353;
+    height: 130px;
+    font-family: "andika";  
+}
+
+.receita{
+    display: none;
+    background-color: #f8f8f8;
+    border: none;
+}
+
+.receita:hover{
+    color:#ff8c06;
+}
+
+.texto-tela-grande:hover .receita{
+    display: inline;
+}
+
+.texto-tela-pequena{display: none;}
+
+/* demais configurações  */
+
+/* comportamento conforme o tamanho das telas */
+
+@media only screen and (max-width: 990px){
+    .texto-tela-grande{display: none;}
+    .bordas{display: none;}
+    .clique{margin-top: -11%;}
+    .linha{margin-top: 1%;}
+    .texto-tela-pequena{
+        display: inline; 
+        position: absolute;
+        top: 0%;
+        width: 27%;
+        height: auto;
+        font-size: 14px;
+        color: #4d1616;
+        background-color: rgba(233, 233, 233, 0.7);
+        padding-bottom: 5px;
+        left: 4%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .texto-tela-grande{display: none;}
+    .bordas{display: none;}
+    .clique{margin-top: -10%;}
+    .linha{margin-top: 2%;}
+    .texto-tela-pequena{
+        display: inline; 
+        position: absolute;
+        top: 0%;
+        width: 35%;
+        height: auto;
+        font-size: 14px;
+        color: #4d1616;
+        background-color: rgba(233, 233, 233, 0.7);
+        padding-bottom: 5px;
+        left: 5%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .texto-tela-grande{display: none;}
+    .bordas{display: none;}
+    .clique{margin-top: -8%;}
+    .linha{margin-top: 2%;}
+    .texto-tela-pequena{
+        display: inline; 
+        position: absolute;
+        top: 0%;
+        width: 80%;
+        height: auto;
+        font-size: 14px;
+        color: #4d1616;
+        background-color: rgba(233, 233, 233, 0.7);
+        padding-bottom: 5px;
+        left: 5%;
+    }
+}
+/* comportamento conforme o tamanho das telas */
+
+/* efeito nas bordas */
+.bordas::before, .bordas::after { 
+    content:""; 
+    display:block; 
+    box-sizing:border-box;
+                      
+    position:absolute;
+    z-index:5; 
+    pointer-events: none;
+                      
+    width:0; 
+    height:0; 
+    opacity:0; 
+    border:2px solid #4d1616; 
+}
+
+.bordas::before { 
+    border-right:none; 
+    border-bottom:none;
+    border-top: none;
+    left:0; 
+    top:0;
+            
+    transition:width .125s linear 1.5s, height .125s linear .20s, opacity .1s 2s; 
+}
+.bordas::after  { 
+    border-top:none; 
+    border-right:none; 
+    right:0; 
+    bottom:0;
+            
+    transition:width .125s linear .125s, height .125s linear, opacity .1s .20s; 
+}
+
+.bordas:hover::before { 
+    width:100%; 
+    height:90%; 
+    opacity:1; 
+}
+
+.bordas:hover::before { 
+    transition: width .125s linear, height .125s linear .125s, opacity .1s; 
+}
+.bordas:hover::after  { 
+    transition:width .125s linear .20s, height .125s linear 1.5s, opacity .1s .20s; 
+}
+/* efeito nas bordas */
